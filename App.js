@@ -1,16 +1,26 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import Header from "./Header";
-import Footer from "./Footer";
-import Item_body from './src/body/containers/Item_body';
+import { StyleSheet } from "react-native";
+import Bebidas from "./Bebidas";
+import Carnes from "./Carnes";
+import Ensaladas from "./Ensaladas";
+import Mariscos from "./Mariscos";
+import Item_body from "./src/body/containers/Item_body";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Header />
-      <Item_body />
-      <Footer />
-    </View>
+    <NavigationContainer style={styles.container}>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Item_body} />
+        <Stack.Screen name="Carnes" component={Carnes} />
+        <Stack.Screen name="Mariscos" component={Mariscos} />
+        <Stack.Screen name="Ensaladas" component={Ensaladas} />
+        <Stack.Screen name="Bebidas" component={Bebidas} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
