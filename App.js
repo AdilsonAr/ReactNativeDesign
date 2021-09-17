@@ -1,15 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import Header from "./Header";
-import Footer from "./Footer";
-import Item_body from './src/body/containers/Item_body';
+import { StyleSheet, View } from "react-native";
+import Bebidas from './Bebidas';
+import Carnes from './Carnes';
+import Ensaladas from './Ensaladas';
+import Mariscos from './Mariscos';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Header />
-      <Item_body />
-      <Footer />
+      <Mariscos />
     </View>
   );
 }
