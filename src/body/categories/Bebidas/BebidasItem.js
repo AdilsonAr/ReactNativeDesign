@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Image } from 'react-native';
 import styled from 'styled-components/native';
 import Icon_c from '../../components/Icon_c';
 import Title_c from '../../components/Title_c';
@@ -22,7 +22,7 @@ function ProductItem() {
 
         bebidas.forEach(element => {
             card.push(
-                <ItemShadow>
+                <ItemShadow >
                     <View style={style.icon}>
                         {renderIcon()}
                     </View>
@@ -32,9 +32,10 @@ function ProductItem() {
                     <View style={style.main}>
                         <View style={style.description}>
                             <Text style={style.textDescription}>{element.descripcion}</Text>
+                            <Text style={style.textPrice}>{element.precio}</Text>
                         </View>
                         <View style={style.price}>
-                            <Text style={style.textPrice}>{element.precio}</Text>
+                            <Image style={style.img} source={element.image} />
                         </View>
                     </View>
                 </ItemShadow>
@@ -60,7 +61,7 @@ const ItemShadow = styled.View`
     box-shadow:0 0 18px #ccc;
     background-color:#fff;
     width:100%;
-    height:170px;
+    height:220px;
     padding:5px;
 `
 
@@ -74,6 +75,11 @@ const style = StyleSheet.create({
         overflow: 'hidden',
         margin: 10,
         flexDirection: 'row'
+    },
+    img: {
+        height: 135,
+        width: 90,
+        marginBottom: 5
     },
     icon: {
         flexDirection: 'row-reverse',
@@ -92,10 +98,10 @@ const style = StyleSheet.create({
     textPrice: {
         fontSize: 25,
         fontWeight: 'bold',
-        color: '#11B637'
+        color: '#11B637',
+        marginTop: 5
     },
     textDescription: {
         fontSize: 15,
-
     }
 })

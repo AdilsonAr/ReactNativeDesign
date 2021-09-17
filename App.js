@@ -8,7 +8,7 @@ import Mariscos from './Mariscos';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Mariscos />
+      <Bebidas />
     </View>
   );
 }

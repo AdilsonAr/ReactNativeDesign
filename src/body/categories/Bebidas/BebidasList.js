@@ -19,6 +19,6 @@ const style = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         marginEnd: 10,
-        marginStart: 10
+        marginStart: 10,
     }
 })
