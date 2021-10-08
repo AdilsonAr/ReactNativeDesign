@@ -4,8 +4,7 @@ import { StyleSheet, Text, View} from "react-native";
 export default function Footer() {
   return (
     <View style={styles.container}>
-      <Text style={styles.nombres}>Adilson Geovany Arbuez Guzmán</Text>
-      <Text style={styles.nombres}>José David Guzmán Gómez</Text>
+      <Text style={styles.nombres}>Grupo # 7</Text>
     </View>
   );
 }
@@ -20,5 +19,6 @@ const styles = StyleSheet.create({
     fontFamily: "serif",
     fontWeight: "bold",
     fontSize: 15,
+    marginBottom:10
   },
 });
